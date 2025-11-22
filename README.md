@@ -6,7 +6,7 @@ Experiments with various types of Autoencoders on multiple datasets with CUDA su
 
 1. **MNIST** - Handwritten digits (28×28, grayscale)
 2. **Fashion-MNIST** - Clothing items (28×28, grayscale) 
-3. **CIFAR-10** - Color images (32×32, RGB)
+3. **CIFAR-10** - Color images (32×32, RGB) #Incomplete
 
 ## Model Architectures
 
