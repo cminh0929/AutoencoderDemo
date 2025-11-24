@@ -1,12 +1,11 @@
 # Autoencoder Experiments
 
-Experiments with various types of Autoencoders on multiple datasets with CUDA support.
+Experiments with various types of Autoencoders on multiple datasets.
 
 ## Supported Datasets
 
 1. **MNIST** - Handwritten digits (28×28, grayscale)
 2. **Fashion-MNIST** - Clothing items (28×28, grayscale) 
-3. **CIFAR-10** - Color images (32×32, RGB) #Incomplete
 
 ## Model Architectures
 
@@ -259,11 +258,6 @@ python main.py
 **Fashion-MNIST:**
 ```bash
 python main.py --dataset fashion_mnist
-```
-
-**CIFAR-10:**
-```bash
-python main.py --dataset cifar10
 ```
 
 ### Run individual experiments

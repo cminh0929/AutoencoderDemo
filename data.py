@@ -121,7 +121,7 @@ def get_fashion_mnist_loaders(batch_size: int = 64, data_dir: str = './data'):
     
     return train_loader, test_loader
 
-
+'''
 def get_cifar10_loaders(batch_size: int = 64, data_dir: str = './data'):
     """
     Create CIFAR-10 train and test data loaders.
@@ -165,7 +165,7 @@ def get_cifar10_loaders(batch_size: int = 64, data_dir: str = './data'):
     )
     
     return train_loader, test_loader
-
+'''
 
 def add_noise(images: torch.Tensor, noise_factor: float = 0.32) -> torch.Tensor:
     """

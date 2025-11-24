@@ -11,9 +11,8 @@ from visualization import plot_reconstructions, plot_vae_generation, show_noise_
 
 def run_linear_autoencoder(dataset: str = 'mnist'):
     """Run linear autoencoder experiment."""
-    print("\n" + "="*60)
+    
     print(f"LINEAR AUTOENCODER EXPERIMENT - {dataset.upper()}")
-    print("="*60 + "\n")
     
     train_loader, test_loader = get_data_loaders(dataset_name=dataset, batch_size=64)
     model = LinearAutoencoder()
@@ -40,9 +39,8 @@ def run_linear_autoencoder(dataset: str = 'mnist'):
 
 def run_cnn_autoencoder(dataset: str = 'mnist'):
     """Run CNN autoencoder experiment."""
-    print("\n" + "="*60)
+    
     print(f"CNN AUTOENCODER EXPERIMENT - {dataset.upper()}")
-    print("="*60 + "\n")
     
     train_loader, test_loader = get_data_loaders(dataset_name=dataset, batch_size=64)
     model = CNNAutoencoder()
@@ -69,9 +67,8 @@ def run_cnn_autoencoder(dataset: str = 'mnist'):
 
 def run_denoising_autoencoder(dataset: str = 'mnist'):
     """Run denoising autoencoder experiment."""
-    print("\n" + "="*60)
+
     print(f"DENOISING AUTOENCODER EXPERIMENT - {dataset.upper()}")
-    print("="*60 + "\n")
     
     train_loader, _ = get_data_loaders(dataset_name=dataset, batch_size=64)
     
@@ -108,9 +105,8 @@ def run_denoising_autoencoder(dataset: str = 'mnist'):
 
 def run_vae(dataset: str = 'mnist'):
     """Run VAE experiment."""
-    print("\n" + "="*60)
+    
     print(f"VARIATIONAL AUTOENCODER (VAE) EXPERIMENT - {dataset.upper()}")
-    print("="*60 + "\n")
     
     train_loader, test_loader = get_data_loaders(dataset_name=dataset, batch_size=64)
     model = VAE(latent_dim=50)
@@ -147,7 +143,8 @@ def main():
     parser.add_argument(
         '--dataset',
         type=str,
-        choices=['mnist', 'fashion_mnist', 'cifar10'],
+        choices=['mnist', 'fashion_mnist'],
+        #choices=['mnist', 'fashion_mnist', 'cifar10'],
         default='mnist',
         help='Which dataset to use (default: mnist)'
     )
@@ -170,10 +167,5 @@ def main():
     if args.experiment == 'vae' or args.experiment == 'all':
         run_vae(args.dataset)
     
-    print("\n" + "="*60)
-    print("ALL EXPERIMENTS COMPLETED")
-    print("="*60 + "\n")
-
-
 if __name__ == '__main__':
     main()

@@ -8,9 +8,8 @@ from models import LinearAutoencoder, CNNAutoencoder, DenoisingAutoencoder, VAE
 
 def demo_linear_ae():
     """Demo linear autoencoder with saved model."""
-    print("\n" + "="*60)
+    
     print("DEMO: Linear Autoencoder")
-    print("="*60 + "\n")
     
     # Load model
     model = LinearAutoencoder()
@@ -62,9 +61,8 @@ def demo_linear_ae():
 
 def demo_cnn_ae():
     """Demo CNN autoencoder with saved model."""
-    print("\n" + "="*60)
+    
     print("DEMO: CNN Autoencoder")
-    print("="*60 + "\n")
     
     # Load model
     model = CNNAutoencoder()
@@ -114,9 +112,8 @@ def demo_cnn_ae():
 
 def demo_denoising_ae():
     """Demo denoising autoencoder with saved model."""
-    print("\n" + "="*60)
+    
     print("DEMO: Denoising Autoencoder")
-    print("="*60 + "\n")
     
     # Load model
     model = DenoisingAutoencoder()
@@ -169,9 +166,8 @@ def demo_denoising_ae():
 
 def demo_vae():
     """Demo VAE with saved model."""
-    print("\n" + "="*60)
+    
     print("DEMO: Variational Autoencoder (VAE)")
-    print("="*60 + "\n")
     
     # Load model
     model = VAE(latent_dim=50)
@@ -268,9 +264,9 @@ def main():
         if args.model == 'vae' or args.model == 'all':
             demo_vae()
         
-        print("\n" + "="*60)
+        
         print("ALL DEMOS COMPLETED")
-        print("="*60 + "\n")
+        
     
     except FileNotFoundError as e:
         print(f"\nError: {e}")
